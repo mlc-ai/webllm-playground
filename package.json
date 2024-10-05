@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@fontsource/inter": "^5.1.0",
-    "@mlc-ai/web-llm": "^0.2.71",
+    "@mlc-ai/web-llm": "^0.2.73",
     "@tailwindcss/typography": "^0.5.15",
     "@types/react-syntax-highlighter": "^15.5.13",
     "lucide-react": "^0.446.0",
