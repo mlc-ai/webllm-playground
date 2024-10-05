@@ -26,7 +26,7 @@ jobs:
       run: npm run build
 
     - name: Copy README to dist
-      run: cp README.md dist/
+      run: cp README_HF.md dist/README.md
 
     - name: Push to Hugging Face Spaces
       env:

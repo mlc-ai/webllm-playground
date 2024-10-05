@@ -1,3 +1,13 @@
+---
+title: WebLLM Playground
+emoji: 🏎️
+colorFrom: purple
+colorTo: indigo
+sdk: static
+pinned: true
+header: mini
+license: apache-2.0
+---
 ![WebLLM Playground](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/webllm/WebLLM.png)
 
 <div align="center">
@@ -11,17 +21,3 @@
 [![Related Repository: WebLLM Chat](https://img.shields.io/badge/Related_Repo-WebLLM_Chat-fafbfc?logo=github)](https://github.com/mlc-ai/web-llm-chat/)
 [![Related Repository: MLC LLM](https://img.shields.io/badge/Related_Repo-MLC_LLM-fafbfc?logo=github)](https://github.com/mlc-ai/mlc-llm/)
 
----
-
-
-</div>
-
-![WebLLM Gif](./webllm.gif)
-
-## Chat Stats
-
-![Chat Stats](./chat-stats.png)
-
-## Model Selector
-
-![Model Selector](./model-playground.png)
