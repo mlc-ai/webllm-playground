@@ -1,6 +1,6 @@
 import React from 'react';
 import '@fontsource/inter';
-import { Github, Star } from 'lucide-react';
+import { Github } from 'lucide-react';
 
 interface HeaderProps {
   heading: string;
@@ -18,15 +18,14 @@ const Header: React.FC<HeaderProps> = ({ heading, description }) => {
       </p>
       <div className="flex justify-center mt-6">
         <a
-          href="https://github.com/cfahlgren1/webllm-playground"
+          href="https://github.com/mlc-ai/web-llm/"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center px-4 py-2 border-[var(--border-color)] border-[1.5px] bg-[var(--bg-color)] rounded-md text-sm font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-[var(--border-color)] focus:ring-offset-2 focus:ring-offset-gray-900 transition-colors duration-200"
-          aria-label="Star GitHub repository"
+          aria-label="Go to WebLLM GitHub repository"
         >
           <Github size={18} className="mr-2" />
-          <span>Star on GitHub</span>
-          <Star size={18} className="ml-2" />
+          <span>Start Building with WebLLM</span>
         </a>
       </div>
     </header>
