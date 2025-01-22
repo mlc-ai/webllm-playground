@@ -81,14 +81,24 @@ export async function streamingGenerating(
 
     for await (const chunk of completion) {
       const delta = chunk.choices[0]?.delta.content;
-      if (delta) currentMessage += delta;
+      // special-case <think> and </think> so it does not get recognized as html tag
+      if (delta === "<think>") {
+        currentMessage += "&lt;think&gt;";
+      } else if (delta === "<\/think>") {
+        currentMessage += "&lt;/think&gt;";
+      } else if (delta) {
+        currentMessage += delta;
+      }
       if (chunk.usage) {
         usage = chunk.usage;
       }
       onUpdate(currentMessage);
     }
 
-    const finalMessage = await engine.getMessage();
+    let finalMessage = await engine.getMessage();
+    // replace <think> and </think> like above in the final message too
+    finalMessage = finalMessage.replace(/<think>/g, "&lt;think&gt;");
+    finalMessage = finalMessage.replace(/<\/think>/g, "&lt;/think&gt;");
     if (usage) {
       onFinish(finalMessage, usage as webllm.CompletionUsage);
     } else {
