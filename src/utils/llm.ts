@@ -6,6 +6,7 @@ import {
   GoogleIcon,
   QwenIcon,
   SmolLMIcon,
+  DeepSeekIcon,
 } from '../components/icons';
 
 export interface ModelDetails {
@@ -13,7 +14,10 @@ export interface ModelDetails {
   icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
 }
 
+// Important that deepseek is the first so the distilled models don't
+// get picked to the other family
 export const modelDetailsList: ModelDetails[] = [
+  { name: 'deepseek', icon: DeepSeekIcon },
   { name: 'llama', icon: MetaIcon },
   { name: 'phi', icon: MicrosoftIcon },
   { name: 'mistral', icon: MistralIcon },

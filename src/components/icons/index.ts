@@ -5,3 +5,4 @@ export { default as GoogleIcon } from './GoogleIcon';
 export { default as SnowflakeIcon } from './SnowflakeIcon';
 export { default as QwenIcon } from './QwenIcon';
 export { default as SmolLMIcon } from './SmolLMIcon';
+export { default as DeepSeekIcon } from './DeepSeekIcon';
